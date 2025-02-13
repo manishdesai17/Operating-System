@@ -1,0 +1,54 @@
+sed 's/1920/2020/' (texfile) file neme=== used to replace string
+sed 's/he/she/g' (texfile) file neme=== used to replace string
+g used to change all acurence
+p used to change any acurence that line write once again 
+
+sed '/manish/d' filename
+d used to remove manish jya male te delete ae line 
+
+sed '/manish/a\add string write here
+a used to eppend
+
+
+pro24=====
+f="$1"
+  if [ -r "$f" ]; then
+       echo "read permission allowed"
+  else
+       echo "read permission not allowed"
+  fi
+
+  if [ -w "$f" ]; then
+         echo "write permission allowe"
+  else
+         echo "write permission not allowed"
+  fi
+
+  if [ -x "$f" ]; then
+         echo "execute permission allowed"
+  else
+          echo "execute permission not allowed"
+  fi
+
+pro25====
+if [ -f ".obj" ]
+then
+  rm *.obj
+fi
+if [ -f ".lst" ]
+then
+   rm *.lst
+fi
+find . -size 0M -delete
+echo "success delete file"
+
+
+pro25=====
+echo "enter file extention"
+read file
+if [ -f $file ]
+then
+  rm *$file
+fi
+find . -size 0M -delete
+echo "successfully delete files"

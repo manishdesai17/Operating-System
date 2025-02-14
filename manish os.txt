@@ -1,0 +1,25 @@
+echo "enter month or year"
+read expretion
+month=$(echo $expretion | awk '{print $1}')
+year=$(echo $expretion | awk '{print $2}')
+newyear=${#month}
+echo $newyear
+if [ $newyear -gt 2 ];then
+   if [ $newyear -eq 4 ];then
+      cal $month
+   else
+     echo "Invalid year!..."
+   fi
+else
+   if [[ $month -ge 1 && $month -le 12 ]];then
+      year_len=${#year}
+      if [ $year_len -eq 4 ];then
+         cal $month $year
+      else
+         echo "invalid year"
+      fi
+   else
+     echo "Month invalid.Enter month bitween 1 to 12";
+   fi
+
+fi
